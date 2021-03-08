@@ -1,0 +1,14 @@
+broj pitanja:5
+broj sekundi za odgovor:5
+broj pitanja za prolaz:2
+omoguci korisniku da vidi rezultate (1-da, 0-ne):1
+omoguci korisniku da vidi pitanja (1-da, 0-ne):1
+omoguci lan mrezu (1-da, 0-ne):1
+
+
+
+UPOZORENJA:
+Varijabla "broj pitanja" i varijabla "broj sekundi za odgovor" ne smiju biti manje od 5
+Varijabla "broj pitanja" ne smije biti manja od varijable "broj pitanja za prolaz"
+Varijabla "broj pitanja za prolaz" ne smije biti manja od 1
+Varijabla "broj pitanja" u ovoj datoteci mora biti manja od broja pitanja u datoteci "pitanja.txt"

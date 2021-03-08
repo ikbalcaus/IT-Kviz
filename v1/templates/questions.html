@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+  <div class="container mt-5" id="info-box">
+    <table class="table">
+      {% for question in questions %}
+        <tr>
+          <td><h4 class="text-white text-center m-0">{{question}}</h4></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

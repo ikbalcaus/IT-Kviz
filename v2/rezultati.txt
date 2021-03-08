@@ -1,0 +1,6 @@
+test0 ; 0/5 ; danger
+test1 ; 2/5 ; success
+test2 ; 1/5 ; danger
+test3 ; 3/5 ; success
+test4 ; 4/5 ; success
+test5 ; 5/5 ; success

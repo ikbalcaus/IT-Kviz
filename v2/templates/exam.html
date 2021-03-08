@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+
+
+{% block style %}
+  div#exam-content{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+  }
+  div#message{
+    width:700px;
+    height:40px;
+    padding-top:7px;
+    border-radius:10px;
+    text-align:center;
+    font-size:17px;
+    cursor:default;
+    background-color:#198754;
+    transition:background-color {{seconds}}s ease-in;
+  }
+  @media only screen and (max-width:767px){
+    div#message{
+      width:540px;
+    }
+  }
+  @media only screen and (max-width:576px){
+    div#message{
+      width:400px;
+    }
+  }
+{% endblock %}
+
+
+
+{% block body %}
+  <div class="d-flex justify-content-center align-items-center h-75 mt-2">
+    <div class="container" id="exam-content">
+      <form action="/exam" method="post">
+        <div class="container text-white d-flex">
+          <div class="form-group">
+            <input type="text" class="form-control-lg mt-1" style="cursor:default" value="{{questions[number_of_question]}}" readonly>
+            <input type="text" class="form-control-lg mt-3" id="answer" placeholder="Upišite odgovor" name="answer" autocomplete="off">
+          </div><hr>
+          <input type="submit" class="btn btn-primary btn-lg mt-3" id="btn-submit" value="Potvrdi">
+        </div>
+      </form>
+      <div class="text-light mt-3" id="message">Imate još {{seconds}} sekundi da odgovrite na ovo pitanje</div>
+    </div>
+  </div>
+{% endblock %}
+
+
+
+{% block script %}
+  $("#answer").select()
+  $("#message").css("background-color", "#933a16")
+
+  var seconds={{seconds}}
+  setInterval(function(){
+    seconds--
+    $("#message").html("Imate još "+seconds+" sekundi da odgovrite na ovo pitanje")
+  }, 1000)
+
+  setTimeout(function(){
+    $("#btn-submit").click()
+  }, {{seconds}}*1000)
+{% endblock %}

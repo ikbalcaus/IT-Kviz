@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+
+
+{% block body %}
+  <div class="container mt-5" id="info-box">
+    <table class="table mt-3">
+      {% for line in range(number_of_lines) %}
+        <tr
+          {% if result3[line]==" danger" %}
+            style="background-color:rgba(220,53,70,0.6)"
+          {% elif result3[line]==" success" %}
+            style="background-color:rgba(25,135,84,0.4)"
+          {% endif %}
+        >
+          <td><h4 class="text-white text-center m-0">{{result1[line]}}</h4></td>
+          <td><h4 class="text-white text-center m-0" style="padding-right:20px">{{result2[line]}}</h4></td>
+        </tr>
+      {% endfor %}
+    </table>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+UPUTE:
+Da bi ste pokrenuli server prvo otvorite program "main.exe" ili "main.py" ("main.py" radi samo ako imate instaliran programski jezik python).
+Ako server pokrećete preko programa "main.exe" obavezno isključite antivirusni softver
+
+a) Ako želite da pokrenete stranicu na ovom uređaju, pokrenite vaš pretraživač i upišite url "127.0.0.1" ili "localhost"
+b) Ako želite da pokrenete stranicu sa drugog uređaja u lokalnoj mreži uradite sljedeće korake (radi samo ako je LAN mreža omogućena u datoteci "postavke.txt"):
+	1. Pokrenite cmd ili powershell na ovom uređaju i kucajte "ipconfig"
+	2. Pod kategorijom "Wireless LAN adapter Wi-Fi" pogledajte IPv4 adresu od ovog uređaja (192.168.x.x)
+	3. Uđite na bilo koji uređaj u vašoj lokalnoj mreži, zatim otvorite vaš pretraživač i kucajte url - vašu IPv4 adresu od ovog uređaja (192.168.x.x)
+
+
+
+UPOZORENJA:
+U datoteci "pitanja.txt" pitanja i odgovori moraju biti u formatu "pitanje;odgovor"
+Pr. "Koji je glavni grad BiH?;Sarajevo"
+Pr. "Godine ____ je poceo drugi svjetski rat.;1939"
+
+U datoteci "rezultati.txt" rezultati moraju biti u formatu "Ime Prezime ; broj bodova ; boja (success,danger)"
+Pr. "Zeleno ; 5/5 ; success"
+Pr. "Crveno ; 0/5 ; danger"
+
+
+Svaki put kada napravite promjenu u datoteci "postavke.txt" ili "pitanja.txt" morate ponovo pokrenuti program "main.py" ili "main.exe"
+U datoteci "pitanja.txt" mora postojati minimalno 5 pitanja
+U datoteci "pitanja.txt" ne smijete koristiti tačnu-zarez(;) u pitanju
+U datoteci "pitanja.txt" odgovore obavezno pišite uz tačku-zarez bez razmaka na početku ili kraju
+U datoteci "pitanja.txt" ne smijete pisati dijakritičke znakove (č,ć,š,đ,ž)
